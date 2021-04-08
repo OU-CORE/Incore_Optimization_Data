@@ -3,9 +3,7 @@
 #Upload shapefile to incore data service
 
 import pandas as pd
-from pyincore import IncoreClient, DataService, SpaceService, Dataset, FragilityService, MappingSet
-from pyincore.analyses.buildingdamage import BuildingDamage
-from pyincore.analyses.meandamage import MeanDamage
+from pyincore import IncoreClient, DataService, SpaceService, Dataset
 
 #Import input data
 all_buildings = pd.read_csv("../incore_data/MMSA Building Inventory/all_bldgs_ver5_Project.csv")
@@ -22,12 +20,13 @@ ap.drop_duplicates(inplace=True)
 bldg_inventory = pd.merge(all_buildings, ap, on=['guid'])
 bldg_inventory["Latitude"] = [float(x.split(" ")[1][1:]) for x in bldg_inventory.geometry]
 bldg_inventory["Longitude"] = [float(x.split(" ")[2][:-1]) for x in bldg_inventory.geometry]
+bldg_inventory.to_csv("../derived_data/MMSA_Building_Inventory.csv")
 
 
 print("Building inventory Created")
 print("---------------------------")
 print("Length - {}".format(len(bldg_inventory)))
-print("#unique guids - {} \n".format(len(bldg_inventory.guid.unique())))
+print("unique guids - {} \n".format(len(bldg_inventory.guid.unique())))
 
 
 shp_file = input("Is shape file created?[y/n]: ")
@@ -68,7 +67,7 @@ if shp_file=='y':
         print("Checking to see if it worked by loading this from remote dataset... \n")
         
         buildings = Dataset.from_data_service(dataset_id, data_services)
-        buildings
+        print(buildings)
 
 
         
