@@ -1,3 +1,15 @@
 Shelby/incore_data/
 .ipynb_checkpoints/
 Shelby/sensitive/
+./Shelby/derived_data/housing_unit_allocation_shelby.csv
+./Shelby/derived_data/IN-CORE_1bv6_population_dislocation.csv
+./Shelby/incore_data/All buildings ver 5/all_bldgs_ver5_Project.dbf
+./Shelby/incore_data/MMSA Address Point Inventory/IN-CORE_2dv3_AddressPointInventory_2020-01-22_strctid.csv
+./Shelby/derived_data/building inventory/MMSA_Building_Inventory.csv
+./Shelby/derived_data/building inventory/shapefile_package/MMSA_Building_Inventory.dbf
+./Shelby/derived_data/housing_unit_allocation_shelby.csv
+./Shelby/derived_data/IN-CORE_1bv6_population_dislocation.csv
+./Shelby/derived_data/Shelby_HUA.csv
+./Shelby/incore_data/All buildings ver 5/all_bldgs_ver5_Project.dbf
+./Shelby/incore_data/MMSA Address Point Inventory/IN-CORE_2dv3_AddressPointInventory_2020-01-22_strctid.csv
+./Shelby/notebooks_and_scripts/IN-CORE_1bv6_housingunitallocation.csv_1238.csv
